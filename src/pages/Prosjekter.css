@@ -1,0 +1,86 @@
+.project-page {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f7f7f7;
+  }
+  
+  .project-page h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .project-page p {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 40px;
+  }
+  
+  .project-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+  
+  /* Større seksjons-stil for hvert prosjekt */
+  .project-section {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .project-image {
+    width: 250px;
+    height: 250px;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .project-content {
+    max-width: 600px;
+    text-align: left;
+  }
+  
+  .project-content h3 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .project-content p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 15px;
+  }
+  
+  .project-content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    color: #333;
+  }
+  
+  .project-content ul li {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 8px;
+  }
+  
+  /* Gjør seksjonen mer responsiv */
+  @media (max-width: 768px) {
+    .project-section {
+      flex-direction: column;
+      text-align: center;
+      padding: 20px;
+    }
+  
+    .project-image {
+      width: 100%;
+      height: auto;
+    }
+  }
+  

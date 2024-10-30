@@ -1,0 +1,55 @@
+.praksis-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    color: #333;
+  }
+  
+  h2 {
+    font-size: 2em;
+    color: #2c3e50;
+    margin-bottom: 20px;
+  }
+  
+  .praksis-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 500px;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .praksis-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .praksis-content {
+    padding: 15px;
+  }
+  
+  .praksis-content p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+  }
+  
+  .praksis-content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    text-align: left;
+  }
+  
+  .praksis-content li {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 5px;
+  }
+  

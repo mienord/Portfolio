@@ -1,42 +1,200 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* General reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  font-family: 'Arial', Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9fafb;
+  overflow-x: hidden;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Navbar styling */
+.navbar {
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle shadow for cleaner look */
+  padding: 20px 30px;
+  width: 100vw;           /* Full width */
+  position: fixed;        /* Fixed position to stay at top */
+  top: 0;
+  left: 0;
+  z-index: 1000;          /* Layered above other content */
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  justify-content: flex-end;
+  padding-right: 30px;
+}
+
+.navbar a {
+  font-size: 1.2em;        /* Larger font size */
+  color: #333;
+  font-weight: 600;        /* Thicker font weight */
+  transition: color 0.2s ease;
+}
+
+.navbar a:hover {
+  color: #555;
+}
+
+/* About Section */
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 20px;
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  max-width: 1200px;
+  align-items: center;
+}
+
+.about-image {
+  flex-shrink: 0;
+}
+
+.about-image img {
+  width: 300px;         /* Larger image for a more impactful look */
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Soft shadow for depth */
+}
+
+.about-text {
+  max-width: 600px;
+  text-align: left;
+}
+
+.about h2 {
+  font-size: 2em;       /* Smaller title for a modern feel */
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.about p {
+  font-size: 1.15em;
+  color: #555;
+  line-height: 1.7;
+}
+
+/* Projects Section */
+.projects {
+  padding: 60px 20px;
   text-align: center;
+  background-color: #f9fafb;
+  width: 100%;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.projects h2 {
+  font-size: 2em;
+  margin-bottom: 25px;
+  color: #333;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.project {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 260px;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Softer shadow for modern aesthetic */
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project h3 {
+  font-size: 1.3em;
+  margin-top: 0;
+  color: #333;
+}
+
+.project p {
+  font-size: 0.95em;
+  color: #666;
+}
+
+.project:hover {
+  transform: scale(1.04);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12); /* Enhance shadow on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    align-items: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  .project-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project {
+    width: 90%;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* Contact Section */
+.contact {
+  padding: 50px 20px;
+  text-align: center;
+  width: 100%;
+  background-color: #ffffff;
 }
 
-.card {
-  padding: 2em;
+.contact h2 {
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 20px;
 }
 
-.read-the-docs {
-  color: #888;
+.contact p {
+  font-size: 1.15em;
+  color: #555;
+  line-height: 1.7;
+}
+
+.contact-button {
+  margin-top: 20px;
+  padding: 12px 28px;
+  background-color: #4a90e2;
+  border: none;
+  border-radius: 6px;
+  font-size: 1em;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.contact-button:hover {
+  background-color: #5aaefb;
 }
